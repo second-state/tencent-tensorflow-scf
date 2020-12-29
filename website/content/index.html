@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>AI 推理的云函数</title>
+
+    <link rel="stylesheet" href="./normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./env.js"></script>
+  </head>
+  <body>
+    <section class="first-screen odd">
+      <header>
+        <a class="ss-serverless" href="https://www.secondstate.io/faas/" target="_blank"></a>
+        <a class="ss-github" href="https://github.com/second-state/" target="_blank"></a>
+      </header>
+      <div class="loves">
+        <a href="https://www.secondstate.io/" target="_blank">Second State</a>
+        <span class="heart">❤️</span>
+        <a href="" target="_blank">腾讯云 Serverless</a>
+        <span class="heart">❤️</span>
+        <a href="https://webassembly.org/" target="_blank">WebAssembly</a>
+      </div>
+      <div class="external">
+        <a href="https://second-state.github.io/china-conf-sign/index.html" target="_blank">一键生成为 Rust China Conf 打 Call 的海报</a>
+      </div>
+    </section>
+
+    <section class="game even">
+      <h2>AI 推理应用，Powered by Serverless 云函数</h2>
+      <div class="explanation">
+        <div>让 Serverless 云函数看看你中午吃了什么？</div>
+      </div>
+      <div>
+        <img src="./imgs/ai.png" id="img_file" />
+        <div id="msg"></div>
+      </div>
+      <div class="actions">
+        <button onclick="selectFile()">选择图片文件</button>
+        <input type="file" id="select_file" onchange="fileSelected()" />
+        <button class="master" onclick="identFood()">这是什么食物？</button>
+      </div>
+      <div class="note">
+        <p>请选择一张图片，并进行识别</p>
+        <p>如果没有照片，可以使用我们提供的 <a href="./imgs/hotdogBig.png" target="_blank">hotdog</a> 图片</p>
+      </div>
+      <div class="external2">
+        <a href="" target="_blank"></a>
+      </div>
+    </section>
+
+    <section class="challenge odd">
+      <h2>用 Rust 写 Serverless 函数</h2>
+      <ul>
+        <li>
+          <div>Challenge #1 用 Rust 写一个 serverless function</div>
+          <div class="prize">Prize: Serverless Rust Swag by Second State</div>
+        </li>
+        <li>
+          <div>Challenge #2 用 Rust 写 AI as a service 云函数</div>
+          <div class="prize">Prize: Keychron K2 Wireless Mechanical Keyboard (Version 2)</div>
+        </li>
+        <li>
+          <div>Challenge #3 将 SSVM 扩展到更多应用场景与平台</div>
+          <div class="prize">Prize: Mac mini (M1 Chip)</div>
+        </li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://www.secondstate.io/articles/serverless-functions-in-rust-challenge-zh/" target="_blank">了解更多</a>
+      </div>
+    </section>
+
+    <section class="footer odd">
+      <div class="footer-content">
+        <div>
+          <a href="https://www.secondstate.io/faas/" target="_blank">
+            <img src="./imgs/ss-serverless-wasm.png" />
+          </a>
+        </div>
+        <div class="links">
+          <a href="https://github.com/second-state/" target="_blank">GitHub</a>
+          <a href="https://www.secondstate.io/ssvm/" target="_blank">SSVM</a>
+          <a href="https://www.secondstate.io/faas/" target="_blank">Second State FaaS</a>
+          <a href="https://www.secondstate.io/articles/getting-started-with-function-as-a-service-in-rust/" target="_blank">Get Started</a>
+          <a href="https://webassemblytoday.substack.com/" target="_blank">Newsletter</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="./axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+
+    <script>
+      setTimeout(function() {
+        document.querySelector('.first-screen').classList.add('show')
+      }, 500)
+      function selectFile() {
+        document.querySelector('#select_file').click()
+      }
+      function fileSelected() {
+        const file = document.querySelector('#select_file').files[0]
+        const img = document.querySelector("#img_file");
+
+	var fileExtension = ['jpeg', 'jpg'];
+        if (!fileExtension.includes(file.name.split('.').pop().toLowerCase())) {
+          alert("Only formats are allowed : "+fileExtension.join(', '));
+          return false;
+        }
+        if (file.size > 1048576) {
+          alert("Your image is too large. Max upload image size is 1MB");
+          return false;
+        }
+
+        img.src = URL.createObjectURL(file)
+        img.width = 220
+        img.onload = function() {
+          URL.revokeObjectURL(this.src)
+        }
+        document.querySelector('#msg').innerHTML = ''
+      }
+      function identFood() {
+        if (document.querySelector('#select_file').files.length === 0) {
+          document.querySelector('#msg').innerHTML = '请先选择一张图片'
+          return
+        }
+        document.querySelector('#msg').innerHTML = '识别中...'
+        axios({
+          url: window.env.API_URL,
+          method: 'post',
+          data: document.querySelector('#select_file').files[0],
+          headers: {
+            'Content-Type': 'application/octet-stream'
+          }
+        }).then(function(data) {
+          document.querySelector('#msg').innerHTML = data.data
+        }).catch(function(e) {
+          alert('服务繁忙，请稍后重试')
+        })
+      }
+    </script>
+  </body>
+</html>
