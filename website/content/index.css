@@ -274,7 +274,7 @@ section.game .explanation {
   opacity: 1;
 }
 .first-screen.show {
-  min-height: 75vh;
+  min-height: 50vh;
 }
 
 li .prize {
