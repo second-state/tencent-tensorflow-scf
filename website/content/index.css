@@ -151,8 +151,6 @@ section.odd a {
 }
 
 section.first-screen {
-  min-height: 100vh;
-  transition: all 0.5s ease 2s;
   justify-content: space-around;
 }
 
@@ -196,8 +194,6 @@ section.game img {
 
 h1 {
   margin-bottom: 40px;
-  transition: all 1s ease;
-  transform: translateY(10px);
   opacity: 0;
   font-size: 30px;
 }
@@ -208,8 +204,6 @@ h2 {
 }
 
 .sub-title {
-  transition: all 0.7s ease 0.8s;
-  transform: translateY(10px);
   opacity: 0;
 }
 
@@ -258,23 +252,18 @@ section.game .explanation {
 .loves {
   flex-grow: 1;
   text-align: center;
-  transition: all 0.5s ease 1.5s;
-  transform: translateY(10px);
   opacity: 0;
 }
 
 .external {
-  transition: all 0.5s ease 2s;
   opacity: 0;
   font-size: 0.8em;
 }
 
 .show h1, .show .sub-title, .show .loves, .show .external {
-  transform: translateY(0);
   opacity: 1;
 }
 .first-screen.show {
-  min-height: 50vh;
 }
 
 li .prize {
