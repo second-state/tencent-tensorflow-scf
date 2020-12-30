@@ -193,7 +193,7 @@ section.game img {
 }
 
 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   opacity: 0;
   font-size: 30px;
 }
@@ -209,6 +209,7 @@ h2 {
 
 .explanation {
   color: #a7a7a7;
+  margin-bottom: 10px;
 }
 
 .lottery-prize {
