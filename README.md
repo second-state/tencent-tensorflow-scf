@@ -22,7 +22,7 @@ $ cp pkg/scf.so scf/
 $ sls deploy
 ```
 
-Load the deployed URL in your browser and have fun! Exmample: https://sls-website-ap-hongkong-sfjvl6t-1302315972.cos-website.ap-hongkong.myqcloud.com/
+Load the deployed URL in your browser and have fun! Exmample: https://sls-website-ap-hongkong-wlzo13p-1302315972.cos-website.ap-hongkong.myqcloud.com/
 
 ## Developers
 
