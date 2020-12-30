@@ -84,11 +84,11 @@
 
 	var fileExtension = ['jpeg', 'jpg'];
         if (!fileExtension.includes(file.name.split('.').pop().toLowerCase())) {
-          alert("Only formats are allowed : "+fileExtension.join(', '));
+          alert("图片格式不支持。我们目前只支持下列图片文件格式 : "+fileExtension.join(', '));
           return false;
         }
         if (file.size > 1048576) {
-          alert("Your image is too large. Max upload image size is 1MB");
+          alert("图片太大。我们目前只支持 1MB 以下的图片。注：很多手机支持选择上传图片的大小。");
           return false;
         }
 
