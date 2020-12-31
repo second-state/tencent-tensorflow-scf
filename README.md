@@ -1,3 +1,5 @@
+[English](README-en.md) | [视频演示](https://youtu.be/Thoi7XrIKvE) | [Live demo!](https://sls-website-ap-hongkong-m5jv9m8-1302315972.cos-website.ap-hongkong.myqcloud.com/)
+
 # 快速开始
 
 首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后按照下面的提示操作.
