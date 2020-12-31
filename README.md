@@ -1,6 +1,6 @@
-# Quick start
+# 快速开始
 
-Make sure that you have the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) installed. Clone this repo, and do the following.
+首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后按照下面的提示操作.
 
 ```
 $ sls deploy
@@ -11,30 +11,31 @@ $ sls deploy
 63s › tencent-tensorflow-scf › "deploy" ran for 3 apps successfully.
 ```
 
-Load the website URL in any web browser and start to use this function to identify objects in photos.
+在浏览器中加载网站 URL，就开始使用函数来识别照片中的对象啦。
 
-# Build your own Tensorflow cloud function
+# 创建你自己的 Tensorflow 云函数
 
-Fork this repo and use the `Code | Open with Codespaces` button to launch Github Codespaces IDE in your browser. It may take a few minutes to start the first time. 
+Fork 这个 repo，使用 `Code | Open with Codespaces` 按钮来在浏览器中打开 Github Codespaces IDE 。第一次启动时，需要花费几分钟。 
 
-## Low code development
+## 低代码开发
 
-Once the Codespaaces IDE starts, you can make simple changes to the source code to customize it for your own applications. [See a tutorial](https://www.secondstate.io/articles/faas-image-classification/)
 
-* Make changes to the Tensorflow model and data pre-processing and post-processing logic in `src/lib.rs` file. 
-* Make changes to the front end UI in the `website/content/index.html` file.
+一旦 Codespaaces IDE 启动了, 你就可以根据自己的应用程序需求来对源代码进行修改，自定义函数。 [查看教程](https://www.secondstate.io/articles/faas-image-classification/)
 
-## Build
+* 在 `src/lib.rs` 文件中更改 TensorFlow 模型以及数据预处理和后处理逻辑。
+* 在 `website/content/index.html` 文件中对前端UI进行更改。
 
-Open a `Terminal` windon in the Codespaces IDE, and run the following command to build your cloud function.
+## 创建
+
+在 Codespaces 打开 `Terminal` 窗口, 然后运行下面的命令行来创建云函数。
 
 ```
 $ ssvmup build --enable-aot
 ```
 
-## Deploy
+## 部署
 
-In the `Terminal` window, run the following command to deploy the Tensorflow cloud function to the Tencent Cloud.
+在 `Terminal` 窗口，运行下面的命令行将 TensorFlow 云函数部署到腾讯云上。
 
 ```
 $ cp pkg/scf.so scf/
@@ -43,19 +44,18 @@ $ sls deploy
   website:       https://sls-website-ap-hongkong-kfdilz-1302315972.cos-website.ap-hongkong.myqcloud.com
 ```
 
-Load the deployed URL in any web browser and have fun!
+在浏览器内加载部署好的 URL。 Have fun!
 
-# Develop on your own computer
+# 在本地机器上部署
 
-If you cannot or do not wish to use Github Codespaces, you can install the ssvmup and serverless framework toolchains on your own computer (or Docker image) to build and deploy Tensorflow serverless functions.
+如果你不能或不想使用 Github Codespaces，那可以在自己的计算机（或Docker映像）上安装 ssvmup 和 serverless framework 工具链来构建和部署 Tensorflow serverless 函数。
+[安装 ssvmup 工具](https://www.secondstate.io/articles/ssvmup/)
 
-[Install the ssvmup tool](https://www.secondstate.io/articles/ssvmup/)
-
-Install the Serverless Framework via the NPM.
+通过 NPM 安装 Serverless Framework。
 
 ```
 $ npm install -g serverless
 ```
 
-That's it. You can now follow the Codespaces' build and deploy instructions above.
+准备工作已经做完了，现在你可以参照上文提到的 Codespaces 的创建和部署教程来创建自己的云函数。
 
