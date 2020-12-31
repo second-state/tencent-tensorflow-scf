@@ -5,13 +5,10 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     PATH=/usr/local/cargo/bin:$PATH
 RUN apt-get update \
     && apt-get install -y tzdata \
-    && apt-get -y upgrade && apt-get install -y build-essential curl wget git vim libboost-all-dev llvm-dev liblld-10-dev \
-    && apt-get install -y libjpeg-dev libpng-dev
+    && apt-get -y upgrade && apt-get install -y build-essential curl wget git vim libboost-all-dev llvm-dev liblld-10-dev
 RUN curl -sL https://deb.nodesource.com/setup_14.x |  bash \
     && apt-get install -y nodejs \
     && npm install -y -g ssvmup --unsafe-perm \
-    && npm install -y ssvm \
-    && npm install -y ssvm-extensions \
     && npm install -g serverless
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
