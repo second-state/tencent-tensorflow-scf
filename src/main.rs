@@ -58,9 +58,9 @@ fn main() {
     }
 
     let class_name = label_lines.next().unwrap().to_string();
-    if max_value > 50 {
+    if max_value > 50 && max_index != 0 {
       // println!("It {} a <a href='https://www.google.com/search?q={}'>{}</a> in the picture", confidence.to_string(), class_name, class_name);
-      println!("上传的图片里面{}一个 <a href='https://www.google.com/search?q={}'>{}</a>", confidence.to_string(), class_name, class_name);
+      println!("上传的图片里面{} <a href='https://www.google.com/search?q={}'>{}</a>", confidence.to_string(), class_name, class_name);
     } else {
       // println!("It does not appears to be any food item in the picture.");
       println!("上传的图片里面没有检测到食品");
