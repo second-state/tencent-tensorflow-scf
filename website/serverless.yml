@@ -1,5 +1,5 @@
 org: secondstate
-app: AIaaS
+app: AIaaS-template
 stage: prod
 
 component: website
