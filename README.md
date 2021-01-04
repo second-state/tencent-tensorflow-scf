@@ -22,7 +22,7 @@ Fork 这个 repo，使用 `Code | Open with Codespaces` 按钮来在浏览器中
 ## 低代码开发
 
 
-一旦 Codespaaces IDE 启动了, 你就可以根据自己的应用程序需求来对源代码进行修改，自定义函数。 [查看教程](https://www.secondstate.io/articles/faas-image-classification/)
+一旦 Codespaces IDE 启动了, 你就可以根据自己的应用程序需求来对源代码进行修改，自定义函数。 [查看教程](https://www.secondstate.io/articles/faas-image-classification/)
 
 * 在 `src/lib.rs` 文件中更改 TensorFlow 模型以及数据预处理和后处理逻辑。
 * 在 `website/content/index.html` 文件中对前端UI进行更改。
