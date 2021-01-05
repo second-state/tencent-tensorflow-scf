@@ -1,4 +1,4 @@
-[中文](README.md) | [Screencast](https://youtu.be/Thoi7XrIKvE) | [Live demo!](https://sls-website-ap-hongkong-rvjzs27-1302315972.cos-website.ap-hongkong.myqcloud.com/)
+[中文](README.md) | [Screencast](https://youtu.be/Thoi7XrIKvE) | [Live demo!](https://sls-website-ap-hongkong-rvjzs27-1302315972.cos-website.ap-hongkong.myqcloud.com/) | [Coding tutorial](https://www.secondstate.io/articles/tencent-tensorflow/)
 
 # Quick start
 
@@ -21,7 +21,7 @@ Fork this repo and use the `Code | Open with Codespaces` button to launch Github
 
 ## Low code development
 
-Once the Codespaaces IDE starts, you can make simple changes to the source code to customize it for your own applications. [See a tutorial](https://www.secondstate.io/articles/faas-image-classification/)
+Once the Codespaaces IDE starts, you can make simple changes to the source code to customize it for your own applications. [See a coding tutorial](https://www.secondstate.io/articles/tencent-tensorflow/)
 
 * Make changes to the Tensorflow model and data pre-processing and post-processing logic in `src/lib.rs` file. 
 * Make changes to the front end UI in the `website/content/index.html` file.
