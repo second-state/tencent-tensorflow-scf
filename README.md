@@ -2,7 +2,15 @@
 
 # 快速开始
 
-首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后按照下面的提示操作.
+首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后下载必要的库.
+
+```
+$ cd cos
+$ wget https://tensorflow-dep-1302315972.cos.ap-hongkong.myqcloud.com/layer.zip
+$ cd ..
+```
+
+用下面的命令部署整个云原生应用！
 
 ```
 $ sls deploy
@@ -21,8 +29,7 @@ Fork 这个 repo，使用 `Code | Open with Codespaces` 按钮来在浏览器中
 
 ## 低代码开发
 
-
-一旦 Codespaaces IDE 启动了, 你就可以根据自己的应用程序需求来对源代码进行修改，自定义函数。 [查看教程](https://www.secondstate.io/articles/faas-image-classification/)
+一旦 Codespaces IDE 启动了, 你就可以根据自己的应用程序需求来对源代码进行修改，自定义函数。 [查看教程](https://www.secondstate.io/articles/faas-image-classification/)
 
 * 在 `src/lib.rs` 文件中更改 TensorFlow 模型以及数据预处理和后处理逻辑。
 * 在 `website/content/index.html` 文件中对前端UI进行更改。
@@ -41,6 +48,11 @@ $ ssvmup build --enable-aot
 
 ```
 $ cp pkg/scf.so scf/
+
+$ cd cos
+$ wget https://tensorflow-dep-1302315972.cos.ap-hongkong.myqcloud.com/layer.zip
+$ cd ..
+
 $ sls deploy
 ... ...
   website:       https://sls-website-ap-hongkong-kfdilz-1302315972.cos-website.ap-hongkong.myqcloud.com

@@ -1,0 +1,11 @@
+org: secondstate
+app: AIaaS-template
+stage: prod
+
+component: cos
+name: tf-cos
+
+inputs:
+  region: ap-hongkong
+  src: ./
+  bucket: tensorflow-dep

@@ -2,7 +2,15 @@
 
 # Quick start
 
-Make sure that you have the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) installed. Clone this repo, and do the following.
+Make sure that you have the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) installed. Clone this repo, and fetch the custom libraries required by our AI runtime.
+
+```
+$ cd cos
+$ wget https://tensorflow-dep-1302315972.cos.ap-hongkong.myqcloud.com/layer.zip
+$ cd ..
+```
+
+Run the following command to build and deploy the entire application.
 
 ```
 $ sls deploy
@@ -36,10 +44,15 @@ $ ssvmup build --enable-aot
 
 ## Deploy
 
-In the `Terminal` window, run the following command to deploy the Tensorflow cloud function to the Tencent Cloud.
+In the `Terminal` window, run the following commands to deploy the Tensorflow cloud function to the Tencent Cloud.
 
 ```
 $ cp pkg/scf.so scf/
+
+$ cd cos
+$ wget https://tensorflow-dep-1302315972.cos.ap-hongkong.myqcloud.com/layer.zip
+$ cd ..
+
 $ sls deploy
 ... ...
   website:       https://sls-website-ap-hongkong-kfdilz-1302315972.cos-website.ap-hongkong.myqcloud.com
