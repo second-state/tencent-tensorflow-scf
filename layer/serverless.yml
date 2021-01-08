@@ -6,7 +6,7 @@ component: layer
 name: tf-layer
 
 inputs:
-  region: ap-hongkong
+  region: ${env:region}
   src:
     bucket: ${output:${stage}:${app}:tf-cos.bucket}
     object: layer.zip

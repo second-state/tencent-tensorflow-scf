@@ -6,6 +6,6 @@ component: cos
 name: tf-cos
 
 inputs:
-  region: ap-hongkong
+  region: ${env:region}
   src: ./
   bucket: tensorflow-dep
