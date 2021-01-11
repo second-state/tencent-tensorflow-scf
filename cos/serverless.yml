@@ -8,4 +8,4 @@ name: tf-cos
 inputs:
   region: ${env:region}
   src: ./
-  bucket: tensorflow-dep
+  bucket: tensorflow-dep-${env:region}
