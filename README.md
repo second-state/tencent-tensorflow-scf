@@ -2,15 +2,7 @@
 
 # 快速开始
 
-首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后下载必要的库.
-
-```
-$ cd cos
-$ wget https://tensorflow-dep-1302315972.cos.ap-hongkong.myqcloud.com/layer.zip
-$ cd ..
-```
-
-用下面的命令部署整个云原生应用！
+首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后用下面的命令部署整个云原生应用！
 
 ```
 $ sls deploy
@@ -48,10 +40,6 @@ $ ssvmup build --enable-aot
 
 ```
 $ cp pkg/scf.so scf/
-
-$ cd cos
-$ wget https://tensorflow-dep-1302315972.cos.ap-hongkong.myqcloud.com/layer.zip
-$ cd ..
 
 $ sls deploy
 ... ...
