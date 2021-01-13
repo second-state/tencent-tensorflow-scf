@@ -15,6 +15,8 @@ $ sls deploy
 
 Load the website URL in any web browser and start to use this function to identify objects in photos.
 
+> GitHub could be very slow behind the Great Chinese Firewall. Clone from Gitee if you are in mainland China. `git clone https://gitee.com/secondstate/tencent-tensorflow-scf.git`
+
 # Build your own Tensorflow cloud function
 
 Fork this repo and use the `Code | Open with Codespaces` button to launch Github Codespaces IDE in your browser. It may take a few minutes to start the first time. 
