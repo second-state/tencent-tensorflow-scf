@@ -1,4 +1,4 @@
-[中文](README.md) | [Screencast](https://youtu.be/Thoi7XrIKvE) | [Live demo!](https://sls-website-ap-hongkong-rvjzs27-1302315972.cos-website.ap-hongkong.myqcloud.com/) | [Coding tutorial](https://www.secondstate.io/articles/tencent-tensorflow/)
+[中文](README.md) | [Screencast](https://youtu.be/Thoi7XrIKvE) | [Live demo!](https://sls-website-ap-beijing-7jlzqqj-1302315972.cos-website.ap-beijing.myqcloud.com/) | [Coding tutorial](https://www.secondstate.io/articles/tencent-tensorflow/)
 
 # Quick start
 
