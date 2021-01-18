@@ -1,4 +1,4 @@
-[English](README-en.md) | [视频演示](https://www.bilibili.com/video/BV1Zh411f7uu/) | [Live demo!](https://sls-website-ap-hongkong-rvjzs27-1302315972.cos-website.ap-hongkong.myqcloud.com/) | [教程](https://juejin.cn/post/6913861424015998989)
+[English](README-en.md) | [视频演示](https://www.bilibili.com/video/BV1Zh411f7uu/) | [Live demo!](https://sls-website-ap-beijing-7jlzqqj-1302315972.cos-website.ap-beijing.myqcloud.com/) | [教程](https://juejin.cn/post/6913861424015998989)
 
 # 快速开始
 
