@@ -2,10 +2,24 @@
 
 # Quick start
 
-Make sure that you have the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) installed. Clone this repo, and run the following command to build and deploy the entire application.
+Clone this repo. From the repo's root directory, you can pull our pre-configured dev Docker image and log into it.
 
 ```
-$ sls deploy
+$ git clone https://github.com/second-state/tencent-tensorflow-scf
+$ cd tencent-tensorflow-scf
+
+$ docker pull secondstate/tencent-tensorflow-scf
+$ docker run --rm -it -v $(pwd):/app secondstate/tencent-tensorflow-scf
+(docker) $
+```
+
+> You do not have to use our Docker image. To build on your own computer or container, make sure that you have installed the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/), [Rust](https://www.rust-lang.org/tools/install), and [ssvmup](https://www.secondstate.io/articles/ssvmup/).
+
+Run the following command inside the Docker container to build and deploy the entire application.
+
+```
+(docker) $ cd /app
+(docker) $ sls deploy
 ... ...
   website:       https://sls-website-ap-hongkong-kfdilz-1302315972.cos-website.ap-hongkong.myqcloud.com
   vendorMessage: null
