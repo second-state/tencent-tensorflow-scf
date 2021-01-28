@@ -2,10 +2,24 @@
 
 # 快速开始
 
-首先请确认已经安装了 [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/) . Clone 这个 repo，然后用下面的命令部署整个云原生应用！
+Clone 这个 repo。从 repo 的根目录，您可以拉取我们预先配置的 dev Docker image 并登录进去。
 
 ```
-$ sls deploy
+$ git clone https://github.com/second-state/tencent-tensorflow-scf
+$ cd tencent-tensorflow-scf
+
+$ docker pull secondstate/tencent-tensorflow-scf
+$ docker run --rm -it -v $(pwd):/app secondstate/tencent-tensorflow-scf
+(docker) $
+```
+
+> 你不一定要使用我们的 Docker image。要在您自己的计算机或容器上构建，请确保您已经安装了[Serverless 框架](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/), [Rust](https://www.rust-lang.org/tools/install), 和[ssvmup](https://www.secondstate.io/articles/ssvmup/).
+
+在 Docker 容器中运行以下命令，以构建和部署整个应用程序。
+
+```
+(docker) $ cd /app
+(docker) $ sls deploy
 ... ...
   website:       https://sls-website-ap-hongkong-kfdilz-1302315972.cos-website.ap-hongkong.myqcloud.com
   vendorMessage: null
