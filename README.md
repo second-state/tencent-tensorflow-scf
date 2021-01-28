@@ -2,10 +2,10 @@
 
 # 快速开始
 
-Clone 这个 repo。从 repo 的根目录，您可以拉取我们预先配置的 dev Docker image 并登录进去。
+Clone 这个 repo。从 repo 的根目录，您可以拉取我们预先配置的 dev Docker image 并登录进去。请见[国内的 Docker hub 镜像](https://yeasy.gitbook.io/docker_practice/install/mirror)。
 
 ```
-$ git clone https://github.com/second-state/tencent-tensorflow-scf
+$ git clone https://gitee.com/secondstate/tencent-tensorflow-scf
 $ cd tencent-tensorflow-scf
 
 $ docker pull secondstate/tencent-tensorflow-scf
