@@ -47,7 +47,7 @@ Once the Codespaaces IDE starts, you can make simple changes to the source code 
 Open a `Terminal` windon in the Codespaces IDE, and run the following command to build your cloud function.
 
 ```
-$ ssvmup build --enable-aot
+$ rustwasmc build --enable-aot
 ```
 
 ## Deploy
