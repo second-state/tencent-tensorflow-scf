@@ -47,7 +47,7 @@ Fork 这个 repo，使用 `Code | Open with Codespaces` 按钮来在浏览器中
 在 Codespaces 打开 `Terminal` 窗口, 然后运行下面的命令行来创建云函数。
 
 ```
-$ ssvmup build --enable-aot
+$ rustwasmc build --enable-aot
 ```
 
 ## 部署
