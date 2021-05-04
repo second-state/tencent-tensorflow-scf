@@ -66,7 +66,7 @@ Load the deployed URL in any web browser and have fun!
 
 # Develop on your own computer
 
-If you cannot or do not wish to use Github Codespaces, you can install the ssvmup and serverless framework toolchains on your own computer (or Docker image) to build and deploy Tensorflow serverless functions.
+If you cannot or do not wish to use Github Codespaces, you can install the `rustwasmc` and serverless framework toolchains on your own computer (or Docker image) to build and deploy Tensorflow serverless functions.
 
 [Install the rustwasmc tool](https://www.secondstate.io/articles/rustwasmc/)
 
