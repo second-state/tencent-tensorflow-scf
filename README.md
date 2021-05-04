@@ -13,7 +13,7 @@ $ docker run --rm -it -v $(pwd):/app secondstate/tencent-tensorflow-scf
 (docker) $
 ```
 
-> 你不一定要使用我们的 Docker image。要在您自己的计算机或容器上构建，请确保您已经安装了[Serverless 框架](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/), [Rust](https://www.rust-lang.org/tools/install), 和[ssvmup](https://www.secondstate.io/articles/ssvmup/).
+> 你不一定要使用我们的 Docker image。要在您自己的计算机或容器上构建，请确保您已经安装了[Serverless 框架](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/), [Rust](https://www.rust-lang.org/tools/install), 和[rustwasmc](https://www.secondstate.io/articles/rustwasmc/).
 
 在 Docker 容器中运行以下命令，以构建和部署整个应用程序。
 
@@ -66,8 +66,8 @@ $ sls deploy
 
 # 在本地机器上部署
 
-如果你不能或不想使用 Github Codespaces，那可以在自己的计算机（或Docker映像）上安装 ssvmup 和 serverless framework 工具链来构建和部署 Tensorflow serverless 函数。
-[安装 ssvmup 工具](https://www.secondstate.io/articles/ssvmup/)
+如果你不能或不想使用 Github Codespaces，那可以在自己的计算机（或Docker映像）上安装 rustwasmc 和 serverless framework 工具链来构建和部署 Tensorflow serverless 函数。
+[安装 ssvmup 工具](https://www.secondstate.io/articles/rustwasmc/)
 
 通过 NPM 安装 Serverless Framework。
 
