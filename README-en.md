@@ -13,7 +13,7 @@ $ docker run --rm -it -v $(pwd):/app secondstate/tencent-tensorflow-scf
 (docker) $
 ```
 
-> You do not have to use our Docker image. To build on your own computer or container, make sure that you have installed the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/), [Rust](https://www.rust-lang.org/tools/install), and [ssvmup](https://www.secondstate.io/articles/ssvmup/).
+> You do not have to use our Docker image. To build on your own computer or container, make sure that you have installed the [Serverless Framework](https://www.serverless.com/framework/docs/providers/tencent/guide/installation/), [Rust](https://www.rust-lang.org/tools/install), and [rustwasmc](https://www.secondstate.io/articles/rustwasmc/).
 
 Run the following command inside the Docker container to build and deploy the entire application.
 
@@ -68,7 +68,7 @@ Load the deployed URL in any web browser and have fun!
 
 If you cannot or do not wish to use Github Codespaces, you can install the ssvmup and serverless framework toolchains on your own computer (or Docker image) to build and deploy Tensorflow serverless functions.
 
-[Install the ssvmup tool](https://www.secondstate.io/articles/ssvmup/)
+[Install the rustwasmc tool](https://www.secondstate.io/articles/rustwasmc/)
 
 Install the Serverless Framework via the NPM.
 
