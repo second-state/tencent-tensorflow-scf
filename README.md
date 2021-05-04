@@ -67,7 +67,7 @@ $ sls deploy
 # 在本地机器上部署
 
 如果你不能或不想使用 Github Codespaces，那可以在自己的计算机（或Docker映像）上安装 rustwasmc 和 serverless framework 工具链来构建和部署 Tensorflow serverless 函数。
-[安装 ssvmup 工具](https://www.secondstate.io/articles/rustwasmc/)
+[安装 rustwasmc 工具](https://www.secondstate.io/articles/rustwasmc/)
 
 通过 NPM 安装 Serverless Framework。
 
